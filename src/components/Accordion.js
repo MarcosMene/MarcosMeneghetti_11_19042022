@@ -3,7 +3,7 @@ import "../styles/generalstyle.css";
 import UpArrow from "../assets/VectorUp.png";
 import DownArrow from "../assets/VectorDown.png";
 
-function Accordion({ title, active, setActive, text }) {
+function Accordion({ title, active, setActive, text, police }) {
   return (
     <div className="accordion">
       <div className="accordingHeading">
@@ -23,16 +23,8 @@ function Accordion({ title, active, setActive, text }) {
         </div>
       </div>
 
-      <div
-        className={
-          (active === title ? "show" : "") + " accordingContent largePolice"
-        }
-      >
-        <div className="according-container">
-          <div>
-            <p>{text}</p>
-          </div>
-        </div>
+      <div className={(active === title ? "show" : "") + " accordingContent"}>
+        <div className={police}>{text}</div>
       </div>
     </div>
   );
