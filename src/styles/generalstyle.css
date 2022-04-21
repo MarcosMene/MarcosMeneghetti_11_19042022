@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* max-width: 1440px; */
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  color: #FF6060;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+}
+
+.container {
+  padding: 0 50px;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+/* SECTIONS  */
+.section,
+.apropos-card {
+
+  position: relative;
+  margin: 50px 0;
+  color: #fff;
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../assets/chezvous.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  filter: brightness(0.6);
+  border-radius: 25px;
+}
+
+.apropos-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../assets/apropos.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  filter: brightness(0.6);
+  border-radius: 25px;
+}
+
+.section h1 {
+  position: relative;
+  font-weight: normal;
+  text-align: center;
+  font-size: 3rem;
+}
+
+
+/* ACCORDIONS  */
+
+.accordion {
+  width: 75%;
+  max-width: 1023px;
+  margin: 30px auto;
+  color: #fff;
+}
+
+.accordingHeading {
+  background: #FF6060;
+  padding: 14px 0;
+  border-radius: 5px;
+
+}
+
+.accordingHeading .according-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+}
+
+.accordingHeading h3 {
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.accordingHeading span {
+  cursor: pointer;
+}
+
+.accordingContent {
+  max-height: 0;
+  opacity: 0;
+  background: #F6F6F6;
+  display: flex;
+  overflow: hidden;
+  transition: all 600ms ease-in-out;
+  border-bottom-right-radius: 15px;
+}
+
+.accordingContent p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  padding: 5px 20px;
+  color: #FF6060;
+  width: 100%;
+  margin: 25px 0;
+}
+
+.accordingContent.largePolice p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 5px 20px;
+  color: #FF6060;
+  width: 100%;
+  margin: 25px 0;
+}
+
+
+
+.accordingContent.show {
+  max-height: 400px;
+  opacity: 1;
+}
