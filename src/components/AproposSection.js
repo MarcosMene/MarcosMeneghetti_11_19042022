@@ -1,7 +1,7 @@
 import React from "react";
 
-const AproposSection = () => {
+const AproposCard = () => {
   return <div className="apropos-card"></div>;
 };
 
-export default AproposSection;
+export default AproposCard;
