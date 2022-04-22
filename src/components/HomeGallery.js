@@ -99,7 +99,7 @@ const HomeGallery = () => {
 const GallerySectionStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background: #f6f6f6;
   border-radius: 25px;
