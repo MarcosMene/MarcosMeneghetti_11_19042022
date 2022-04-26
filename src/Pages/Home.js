@@ -1,13 +1,16 @@
 import React from "react";
-import HomeGallery from "../components/HomeGallery";
-import HomeSection from "../components/HomeSection";
+import Gallery from "../components/Gallery";
+import Section from "../components/Section";
 
 const Home = () => {
   return (
     <main className="main">
       <section className="container">
-        <HomeSection />
-        <HomeGallery />
+        <Section
+          text={`Chez vous, partout et ailleurs`}
+          classname={`section`}
+        />
+        <Gallery />
       </section>
     </main>
   );
