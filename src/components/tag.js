@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-const Tag = () => {
+const Tag = ({ tagTitle }) => {
   return (
     <TagStyle>
-      <p>tag-name</p>
+      <p>{tagTitle}</p>
     </TagStyle>
   );
 };
 
 const TagStyle = styled.div`
-  width: 115px;
+  width: auto;
+  max-width: 200px;
   height: 25px;
   background-color: #ff6060;
   color: #fff;
@@ -19,6 +20,7 @@ const TagStyle = styled.div`
   align-items: center;
   border-radius: 10px;
   margin-right: 15px;
+  padding: 15px;
 `;
 
 export default Tag;
