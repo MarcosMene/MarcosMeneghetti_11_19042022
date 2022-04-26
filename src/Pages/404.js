@@ -28,7 +28,6 @@ const page404 = () => {
 
 const Container404 = styled.div`
   display: flex;
-
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
