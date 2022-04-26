@@ -4,42 +4,69 @@ import Tag from "./tag";
 import styled from "styled-components";
 import LogementRating from "../components/LogementRating";
 import Accordion from "../components/Accordion";
-import AccordionEquipaments from "../components/AccordionEquipaments";
+// import AccordionEquipaments from "../components/AccordionEquipaments";
+import { UseFetch } from "../tools/Services";
+import { useParams, Navigate } from "react-router-dom";
 
-const LogementTitle = () => {
+const LogementDescription = () => {
   const [active, setActive] = useState("");
+
+  const urlParams = useParams();
+
+  const { data } = UseFetch("/data.json");
+
+  const housingData = data?.filter((data) => data.id === urlParams.id);
+
+  if (housingData === null) {
+    return <Navigate to="/404" />;
+  }
 
   return (
     <div>
-      <LogDescription>
-        <div>
-          <h1>Cozy loft on the Canal Saint-Martin</h1>
-          <p>Paris, Île-de-France</p>
-          <Tags>
-            <Tag />
-            <Tag />
-            <Tag />
-          </Tags>
-        </div>
-        <div>
-          <LogementRating />
-        </div>
-      </LogDescription>
+      {housingData &&
+        housingData.map((location, index, id) => (
+          <div key={`${index}-${id}`}>
+            <LogDescription>
+              <div className="housingTitle">
+                <h1>{location.title}</h1>
+                <p>{location.location}</p>
+                <Tags>
+                  {location.tags.map((tag, index) => (
+                    <Tag tagTitle={tag} key={`${index}-${tag}`} />
+                  ))}
+                </Tags>
+              </div>
+              <div className="housingRate">
+                <LogementRating
+                  sellerName={location.host.name}
+                  sellerImage={location.host.picture}
+                />
+              </div>
+            </LogDescription>
 
-      <Accordions className="Accordion">
-        <Accordion
-          title="Description"
-          active={active}
-          setActive={setActive}
-          text="Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). "
-        />
-        <Accordion
-          title="Équipements"
-          active={active}
-          setActive={setActive}
-          text={<AccordionEquipaments />}
-        />
-      </Accordions>
+            <Accordions className="Accordion">
+              <Accordion
+                title="Description"
+                active={active}
+                setActive={setActive}
+                text={location.description}
+              />
+              <Accordion
+                title="Équipements"
+                active={active}
+                setActive={setActive}
+                // text={<AccordionEquipaments />}
+                text={
+                  <ul>
+                    {location[`equipments`].map((list, index) => (
+                      <li key={index}>{list}</li>
+                    ))}
+                  </ul>
+                }
+              />
+            </Accordions>
+          </div>
+        ))}
     </div>
   );
 };
@@ -49,14 +76,17 @@ const LogDescription = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 25px;
+  width: 100%;
 
-  h1 {
-    font-size: 2.25rem;
-    font-weight: 500;
-    margin-top: 25px;
-  }
-  > p {
-    margin-top: 10px;
+  .housingTitle {
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 500;
+      margin-top: 25px;
+    }
+    > p {
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -65,6 +95,7 @@ const Tags = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin-top: 30px;
+  width: 100%;
 `;
 
 const Accordions = styled.div`
@@ -82,10 +113,10 @@ const Accordions = styled.div`
     }
 
     .accordingContent.show {
-      height: 250px;
+      max-height: 400px;
       opacity: 1;
     }
   }
 `;
 
-export default LogementTitle;
+export default LogementDescription;

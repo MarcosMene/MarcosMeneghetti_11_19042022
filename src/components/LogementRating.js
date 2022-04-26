@@ -1,23 +1,38 @@
 import React from "react";
-import Seller from "../assets/seller.jpg";
+import { useParams, Navigate } from "react-router-dom";
+import { UseFetch } from "../tools/Services";
 import FullStar from "../assets/full-star.png";
 import EmptyStar from "../assets/empty-star.png";
 import styled from "styled-components";
 
-const LogementRating = () => {
+const LogementRating = ({ sellerName, sellerImage }) => {
+  const urlParams = useParams();
+
+  const { data } = UseFetch("/data.json");
+
+  const housingData = data?.filter((data) => data.id === urlParams.id);
+
+  if (housingData === null) {
+    return <Navigate to="/404" />;
+  }
+  const allStars = [1, 2, 3, 4, 5];
   return (
     <LogRating>
       <LogSeller>
-        <p>Alexandre Dumas</p>
-        <img src={Seller} alt="seller" />
+        <p>{sellerName}</p>
+        <img src={sellerImage} alt={sellerName} />
       </LogSeller>
 
       <Stars>
-        <img src={FullStar} alt="fullstar" />
-        <img src={FullStar} alt="fullstar" />
-        <img src={FullStar} alt="fullstar" />
-        <img src={EmptyStar} alt="emptystar" />
-        <img src={EmptyStar} alt="emptystar" />
+        {housingData.map((star, index) =>
+          allStars.map((stars) =>
+            star.rating <= stars - 1 ? (
+              <img src={EmptyStar} alt="empty-star" key={`${index}-${stars}`} />
+            ) : (
+              <img src={FullStar} alt="full-star" />
+            )
+          )
+        )}
       </Stars>
     </LogRating>
   );
