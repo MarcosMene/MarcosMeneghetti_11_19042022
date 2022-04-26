@@ -4,20 +4,27 @@ import { Link } from "react-router-dom";
 
 const Card = ({ title, id, cover }) => {
   return (
-    <Link to={`housing/${id}`}>
+    <NavLink to={`housing/${id}`}>
       <GalleryImageStyle>
         <img src={cover} alt="" />
         <div className="gradient"></div>
         <p>{title}</p>
       </GalleryImageStyle>
-    </Link>
+    </NavLink>
   );
 };
+
+const NavLink = styled(Link)`
+  width: 340px;
+  height: 340px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 45px;
+`;
 
 const GalleryImageStyle = styled.div`
   width: 340px;
   height: 340px;
-  margin: 25px 10px 25px 10px;
   position: relative;
 
   img {
@@ -34,20 +41,21 @@ const GalleryImageStyle = styled.div`
     bottom: 0;
     right: 0;
     width: 100%;
-    background: rgb(255, 97, 97);
+    /* background: rgb(255, 97, 97); */
     background: linear-gradient(
       180deg,
-      rgba(255, 97, 97, 0.2),
-      rgba(139, 56, 56, 0.2)
+      rgba(255, 97, 97, 0.6) 20%,
+      rgba(139, 56, 56, 0.9) 100%
     );
+    transition: all 0.3s ease-in-out;
     border-radius: 25px;
   }
 
   &:hover .gradient {
     background: linear-gradient(
       180deg,
-      rgba(255, 97, 97, 0),
-      rgba(139, 56, 56, 0)
+      rgba(255, 97, 97, 0) 70%,
+      rgba(139, 56, 56, 0.6)
     );
   }
 
@@ -57,7 +65,7 @@ const GalleryImageStyle = styled.div`
     color: #fff;
     left: 20px;
     bottom: 23px;
-    font-weight: 500;
+    font-weight: 600;
     width: 90%;
   }
 `;
