@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/generalstyle.css";
-import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_HOUSING } from "./constant/router";
+import {
+  ROUTE_ABOUT,
+  ROUTE_HOME,
+  ROUTE_HOUSING,
+  ROUTE_404,
+} from "./constant/router";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -18,9 +23,9 @@ root.render(
       <Navbar />
       <Routes>
         <Route exact path={ROUTE_HOME} element={<Home />} />
-        <Route exact path={ROUTE_ABOUT} element={<About />} />
+        <Route path={ROUTE_ABOUT} element={<About />} />
         <Route exact path={ROUTE_HOUSING} element={<Housing />} />
-        <Route exact path="*" element={<Page404 />} />
+        <Route path={ROUTE_404} element={<Page404 />} />
       </Routes>
 
       <Footer />
