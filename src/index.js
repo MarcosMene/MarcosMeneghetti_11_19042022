@@ -13,8 +13,8 @@ import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Housing from "./Pages/Logements";
-import Footer from "./components/Footer";
 import Page404 from "./Pages/404";
+import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
