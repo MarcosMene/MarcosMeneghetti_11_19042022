@@ -11,10 +11,8 @@ const Logements = () => {
 
   const housingData = data?.filter((data) => data.id === urlParams.id);
 
- 
-
   if (housingData === null) {
-    return <Navigate to="/404" />;
+    return <Navigate to="*" />;
   }
 
   return (
