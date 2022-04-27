@@ -13,7 +13,7 @@ const LogementRating = ({ sellerName, sellerImage }) => {
   const housingData = data?.filter((data) => data.id === urlParams.id);
 
   if (housingData === null) {
-    return <Navigate to="/404" />;
+    return <Navigate to="/" />;
   }
   const allStars = [1, 2, 3, 4, 5];
   return (
@@ -29,7 +29,7 @@ const LogementRating = ({ sellerName, sellerImage }) => {
             star.rating <= stars - 1 ? (
               <img src={EmptyStar} alt="empty-star" key={`${index}-${stars}`} />
             ) : (
-              <img src={FullStar} alt="full-star" />
+              <img src={FullStar} alt="full-star" key={`${index}-${stars}`} />
             )
           )
         )}

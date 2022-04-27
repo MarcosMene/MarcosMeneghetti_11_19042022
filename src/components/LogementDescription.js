@@ -4,7 +4,7 @@ import Tag from "./tag";
 import styled from "styled-components";
 import LogementRating from "../components/LogementRating";
 import Accordion from "../components/Accordion";
-// import AccordionEquipaments from "../components/AccordionEquipaments";
+
 import { UseFetch } from "../tools/Services";
 import { useParams, Navigate } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const LogementDescription = () => {
       {housingData &&
         housingData.map((location, index, id) => (
           <div key={`${index}-${id}`}>
-            <LogDescription>
+            <LogDescription key={`${index}-${location.id}`}>
               <div className="housingTitle">
                 <h1>{location.title}</h1>
                 <p>{location.location}</p>
@@ -36,7 +36,7 @@ const LogementDescription = () => {
                   ))}
                 </Tags>
               </div>
-              <div className="housingRate">
+              <div className="housingRate" key={`${index}-${`housingRate`}`}>
                 <LogementRating
                   sellerName={location.host.name}
                   sellerImage={location.host.picture}
@@ -46,16 +46,17 @@ const LogementDescription = () => {
 
             <Accordions className="Accordion">
               <Accordion
+                key={`${index}-${`description`}`}
                 title="Description"
                 active={active}
                 setActive={setActive}
                 text={location.description}
               />
               <Accordion
+                key={`${index}-${`equipement`}`}
                 title="Équipements"
                 active={active}
                 setActive={setActive}
-                // text={<AccordionEquipaments />}
                 text={
                   <ul>
                     {location[`equipments`].map((list, index) => (
