@@ -104,6 +104,17 @@ const LogDescription = styled.div`
       flex-direction: row;
       width: 100%;
     }
+
+    .housingTitle {
+      h1 {
+        font-size: 1.6rem;
+
+        margin-top: 0px;
+      }
+      > p {
+        margin-top: 5px;
+      }
+    }
   }
 
   @media (max-width: 485px) {
@@ -112,11 +123,8 @@ const LogDescription = styled.div`
       width: 100%;
       h1 {
         font-size: 1.125rem;
-        font-weight: 500;
+
         margin-top: 0px;
-      }
-      > p {
-        margin-top: 5px;
       }
     }
   }
@@ -142,7 +150,7 @@ const Accordions = styled.div`
 
   .accordion {
     width: 45%;
-    margin: 20px 0;
+    margin: 30px 0;
 
     p {
       font-size: 1.125rem;
@@ -156,7 +164,10 @@ const Accordions = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    margin: 10px 0;
+
+    .accordion {
+      margin: 30px 0 0 0;
+    }
   }
 `;
 

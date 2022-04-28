@@ -56,9 +56,10 @@ const LogRating = styled.div`
 
 const LogSeller = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  width: 210px;
 
   img {
     border-radius: 100%;
@@ -69,19 +70,19 @@ const LogSeller = styled.div`
   p {
     width: 80px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+
     margin-right: 10px;
     text-align: end;
     font-size: 1.125rem;
   }
 
   @media (max-width: 768px) {
+    width: 160px;
     padding: 0;
     margin: 0;
     flex-direction: row;
-
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 20px;
 
     p {
@@ -101,9 +102,14 @@ const Stars = styled.div`
     justify-content: flex-start;
     align-items: center;
     img {
-      width: 18px;
+      width: 25px;
       margin: 0;
       margin-right: 5px;
+    }
+  }
+  @media (max-width: 485px) {
+    img {
+      width: 18px;
     }
   }
 `;

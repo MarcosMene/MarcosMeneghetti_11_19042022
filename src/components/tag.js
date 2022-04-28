@@ -27,6 +27,8 @@ const TagStyle = styled.div`
   }
 
   @media (max-width: 576px) {
+    padding: 2px 4px;
+
     p {
       font-size: 0.625rem;
     }
