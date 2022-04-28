@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/generalstyle.css";
 import UpArrow from "../assets/VectorUp.png";
 import DownArrow from "../assets/VectorDown.png";
+import "../styles/generalstyle.css";
 
 function Accordion({ title, active, setActive, text, police }) {
   return (
