@@ -43,18 +43,49 @@ const HeaderStyle = styled.div`
   img {
     width: 200px;
   }
+
+  @media (max-width: 820px) {
+    img {
+      width: 200px;
+    }
+    @media (max-width: 576px) {
+      padding: 10px 0;
+      img {
+        width: 100px;
+      }
+    }
+  }
 `;
 
 const NavStyle = styled.nav`
   display: flex;
-  width: 200px;
+  /* width: 200px; */
   justify-content: space-between;
 
   a {
-    margin-left: 16px;
+    margin-left: 40px;
     text-decoration: none;
     color: #ff6060;
     font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 820px) {
+    a {
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 576px) {
+    a {
+      font-size: 1.3rem;
+      margin-left: 25px;
+    }
+  }
+  @media (max-width: 485px) {
+    a {
+      font-size: 1rem;
+      margin-left: 15px;
+    }
   }
 `;
 

@@ -21,6 +21,16 @@ const TagStyle = styled.div`
   border-radius: 10px;
   margin-right: 15px;
   padding: 15px;
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 576px) {
+    p {
+      font-size: 0.625rem;
+    }
+  }
 `;
 
 export default Tag;

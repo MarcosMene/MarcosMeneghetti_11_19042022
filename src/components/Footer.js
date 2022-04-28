@@ -26,9 +26,14 @@ const Footer = styled.div`
 
   img {
     margin: 10px 0 30px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
 
+  @media (max-width: 576px) {
     p {
-      font-size: 1.5rem;
+      font-size: 0.75rem;
     }
   }
 `;

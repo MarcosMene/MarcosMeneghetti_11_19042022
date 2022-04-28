@@ -89,6 +89,37 @@ const LogDescription = styled.div`
       margin-top: 10px;
     }
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 25px;
+    width: 100%;
+    flex-direction: column;
+
+    .housingRate {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 485px) {
+    .housingTitle {
+      margin: 0;
+      width: 100%;
+      h1 {
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin-top: 0px;
+      }
+      > p {
+        margin-top: 5px;
+      }
+    }
+  }
 `;
 
 const Tags = styled.div`
@@ -97,6 +128,10 @@ const Tags = styled.div`
   justify-content: flex-start;
   margin-top: 30px;
   width: 100%;
+
+  @media (max-width: 485px) {
+    margin-top: 20px;
+  }
 `;
 
 const Accordions = styled.div`
@@ -107,7 +142,7 @@ const Accordions = styled.div`
 
   .accordion {
     width: 45%;
-    margin: 35px 0;
+    margin: 20px 0;
 
     p {
       font-size: 1.125rem;
@@ -117,6 +152,11 @@ const Accordions = styled.div`
       max-height: 400px;
       opacity: 1;
     }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 10px 0;
   }
 `;
 

@@ -43,6 +43,15 @@ const LogRating = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    width: 100%;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const LogSeller = styled.div`
@@ -58,17 +67,44 @@ const LogSeller = styled.div`
   }
 
   p {
-    width: 100px;
+    width: 80px;
     display: flex;
     justify-content: flex-end;
     margin-right: 10px;
     text-align: end;
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 
 const Stars = styled.div`
   img {
     margin-left: 10px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 18px;
+      margin: 0;
+      margin-right: 5px;
+    }
   }
 `;
 export default LogementRating;

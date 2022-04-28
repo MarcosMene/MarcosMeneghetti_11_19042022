@@ -20,12 +20,30 @@ const NavLink = styled(Link)`
   margin: 0;
   padding: 0;
   margin-bottom: 45px;
+
+  @media (max-width: 820px) {
+    width: 335px;
+    height: 335px;
+  }
+
+  @media (max-width: 485px) {
+    width: 280px;
+    height: 280px;
+  }
 `;
 
 const GalleryImageStyle = styled.div`
   width: 340px;
   height: 340px;
   position: relative;
+
+  &:hover .gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 97, 97, 0) 70%,
+      rgba(139, 56, 56, 0.6)
+    );
+  }
 
   img {
     width: 100%;
@@ -41,22 +59,14 @@ const GalleryImageStyle = styled.div`
     bottom: 0;
     right: 0;
     width: 100%;
-    /* background: rgb(255, 97, 97); */
     background: linear-gradient(
       180deg,
-      rgba(255, 97, 97, 0.6) 20%,
-      rgba(139, 56, 56, 0.9) 100%
+      rgba(255, 97, 97, 0.2) 20%,
+      rgba(139, 56, 56, 0.8) 100%
     );
     transition: all 0.3s ease-in-out;
     border-radius: 25px;
-  }
-
-  &:hover .gradient {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 97, 97, 0) 70%,
-      rgba(139, 56, 56, 0.6)
-    );
+    z-index: 1;
   }
 
   p {
@@ -67,6 +77,18 @@ const GalleryImageStyle = styled.div`
     bottom: 23px;
     font-weight: 600;
     width: 90%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  @media (max-width: 820px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 485px) {
+    width: 100%;
+    height: 100%;
   }
 `;
 

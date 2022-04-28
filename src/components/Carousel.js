@@ -79,8 +79,7 @@ const Carousel = (id) => {
 const CarouselContainer = styled.div`
   position: relative;
   margin-top: 20px;
-
-  max-height: 400px;
+  max-height: 410px;
 
   .arrow-left,
   .arrow-right {
@@ -112,15 +111,13 @@ const CarouselContainer = styled.div`
     opacity: 1;
     transform: scale(1);
     transition-duration: 1s;
-
-    .imageCarousel {
-      width: 100%;
-      height: 400px;
-      border-radius: 5px;
-      object-fit: cover;
-    }
   }
-
+  .imageCarousel {
+    width: 100%;
+    height: 410px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
   .pagination {
     position: absolute;
     bottom: 33px;
@@ -132,6 +129,19 @@ const CarouselContainer = styled.div`
 
   .hide {
     display: none;
+  }
+
+  @media (max-width: 768px) {
+    height: 255px;
+    .imageCarousel {
+      height: 255px;
+    }
+
+    @media (max-width: 485px) {
+      .pagination {
+        display: none;
+      }
+    }
   }
 `;
 
