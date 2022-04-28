@@ -1,18 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 const page404 = () => {
-  // const LinkStyle = () => {
-  //   return {
-  //     textDecoration: "none",
-  //     color: "#FF6060",
-  //     marginTop: "50px",
-  //     fontSize: "1.25rem",
-  //     marginBottom: "35px",
-  //   };
-  // };
-
   return (
     <Container404>
       <div className="body-404">

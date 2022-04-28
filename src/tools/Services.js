@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 /**
- * useFetch hook
+ *Fetch data from the API
  */
 
 export function UseFetch(url) {

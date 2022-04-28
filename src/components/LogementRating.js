@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { UseFetch } from "../tools/Services";
+import styled from "styled-components";
 import FullStar from "../assets/full-star.png";
 import EmptyStar from "../assets/empty-star.png";
-import styled from "styled-components";
 
 const LogementRating = ({ sellerName, sellerImage }) => {
   const urlParams = useParams();

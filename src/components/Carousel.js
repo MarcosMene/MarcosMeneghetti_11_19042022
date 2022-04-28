@@ -1,10 +1,9 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useParams, Navigate } from "react-router-dom";
+import { UseFetch } from "../tools/Services";
 import styled from "styled-components";
 import LeftArrow from "../assets/arrow-left.png";
 import RightArrow from "../assets/arrow-right.png";
-import { useParams, Navigate } from "react-router-dom";
-import { UseFetch } from "../tools/Services";
 
 const Carousel = (id) => {
   const [current, setCurrent] = useState(0);

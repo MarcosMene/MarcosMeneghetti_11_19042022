@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import Card from "./Card";
 import { UseFetch } from "../tools/Services";
+import Card from "./Card";
+import styled from "styled-components";
 
 const Gallery = () => {
   const { data } = UseFetch("/data.json");

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import Tag from "./tag";
 import styled from "styled-components";
+import Tag from "../components/tag";
 import LogementRating from "../components/LogementRating";
 import Accordion from "../components/Accordion";
 

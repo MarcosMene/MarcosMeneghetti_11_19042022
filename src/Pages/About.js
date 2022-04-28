@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import styled from "styled-components";
 import Section from "../components/Section";
 import Accordion from "../components/Accordion";
-import styled from "styled-components";
 
 const Apropos = () => {
   const [active, setActive] = useState("");
@@ -41,8 +41,6 @@ const Apropos = () => {
               text={phrase.text}
             />
           ))}
-
-         
         </Accordions>
       </section>
     </main>

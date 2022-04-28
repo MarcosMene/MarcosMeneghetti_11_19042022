@@ -1,20 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/generalstyle.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   ROUTE_ABOUT,
   ROUTE_HOME,
   ROUTE_HOUSING,
   ROUTE_404,
 } from "./constant/router";
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./styles/generalstyle.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Housing from "./Pages/Logements";
 import Page404 from "./Pages/404";
-import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,7 +26,6 @@ root.render(
         <Route exact path={ROUTE_HOUSING} element={<Housing />} />
         <Route path={ROUTE_404} element={<Page404 />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   </React.StrictMode>
