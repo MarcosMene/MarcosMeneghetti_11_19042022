@@ -16,8 +16,8 @@ const Carousel = (id) => {
 
   const lengthArray = housingData.map((data) => data.pictures.length);
 
-  if (housingData === null) {
-    return <Navigate to="/" />;
+  if (housingData === undefined) {
+    return <Navigate to="/error" />;
   }
 
   const nextSlide = () => {

@@ -17,8 +17,8 @@ const LogementDescription = () => {
 
   const housingData = data?.filter((data) => data.id === urlParams.id);
 
-  if (housingData === null) {
-    return <Navigate to="/" />;
+  if (!housingData) {
+    return <Navigate to="/error" />;
   }
 
   return (
@@ -136,7 +136,7 @@ const Tags = styled.div`
   justify-content: flex-start;
   margin-top: 30px;
   width: 100%;
-
+  flex-wrap: wrap;
   @media (max-width: 485px) {
     margin-top: 20px;
   }

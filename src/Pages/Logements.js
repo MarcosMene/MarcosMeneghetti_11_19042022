@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { UseFetch } from "../tools/Services";
 import Carousel from "../components/Carousel";
 import LogementDescription from "../components/LogementDescription";
+import "../styles/logements.css";
 
 const Logements = () => {
   const urlParams = useParams();
@@ -11,8 +12,8 @@ const Logements = () => {
 
   const housingData = data?.filter((data) => data.id === urlParams.id);
 
-  if (housingData === null) {
-    return <Navigate to="/" />;
+  if (!housingData) {
+    return <Navigate to="/error" />;
   }
 
   return (

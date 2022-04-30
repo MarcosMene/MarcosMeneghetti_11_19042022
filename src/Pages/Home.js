@@ -1,6 +1,7 @@
 import React from "react";
 import Gallery from "../components/Gallery";
 import Section from "../components/Section";
+import "../styles/sections.css";
 
 const Home = () => {
   return (

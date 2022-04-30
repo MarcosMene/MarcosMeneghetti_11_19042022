@@ -12,8 +12,8 @@ const LogementRating = ({ sellerName, sellerImage }) => {
 
   const housingData = data?.filter((data) => data.id === urlParams.id);
 
-  if (housingData === null) {
-    return <Navigate to="/" />;
+  if (!housingData) {
+    return <Navigate to="/error" />;
   }
   const allStars = [1, 2, 3, 4, 5];
   return (
