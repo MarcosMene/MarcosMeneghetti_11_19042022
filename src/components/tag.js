@@ -21,16 +21,17 @@ const TagStyle = styled.div`
   border-radius: 10px;
   margin-right: 15px;
   padding: 15px;
+  margin-top: 10px;
 
   p {
     font-size: 0.85rem;
   }
 
   @media (max-width: 576px) {
-    padding: 2px 4px;
+    padding: 2px 10px;
 
     p {
-      font-size: 0.625rem;
+      font-size: 0.725rem;
     }
   }
 `;
