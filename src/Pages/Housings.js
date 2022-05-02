@@ -3,7 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { UseFetch } from "../tools/Services";
 import Carousel from "../components/Carousel";
 import HousingDescription from "../components/HousingDescription";
-import "../styles/Housings.css";
+
 import styled from "styled-components";
 
 const Housings = () => {
