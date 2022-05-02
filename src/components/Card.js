@@ -27,8 +27,8 @@ const NavLink = styled(Link)`
   }
 
   @media (max-width: 485px) {
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -86,10 +86,10 @@ const GalleryImageStyle = styled.div`
     height: 100%;
   }
 
-  @media (max-width: 485px) {
+  /* @media (max-width: 485px) {
     width: 100%;
     height: 100%;
-  }
+  } */
 `;
 
 export default Card;

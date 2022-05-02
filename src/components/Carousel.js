@@ -12,11 +12,11 @@ const Carousel = (id) => {
 
   const { data } = UseFetch("/data.json");
 
-  const housingData = data?.filter((data) => data.id === urlParams.id);
+  const housingData = data.filter((data) => data.id === urlParams.id);
 
   const lengthArray = housingData.map((data) => data.pictures.length);
 
-  if (housingData === undefined) {
+  if (housingData === []) {
     return <Navigate to="/error" />;
   }
 

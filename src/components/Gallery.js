@@ -4,7 +4,7 @@ import Card from "./Card";
 import styled from "styled-components";
 
 const Gallery = () => {
-  const { data } = UseFetch("/data.json");
+  const { data } = UseFetch("data.json");
 
   return (
     <GallerySectionStyle>
@@ -37,6 +37,10 @@ const GallerySectionStyle = styled.div`
 
   @media (max-width: 820px) {
     grid-template-columns: 1fr;
+  }
+  @media (max-width: 485px) {
+    padding: 20px 0;
+    grid-gap: 3rem;
     background-color: transparent;
   }
 `;

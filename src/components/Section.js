@@ -23,20 +23,21 @@ const SectionStyle = styled.div`
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 220px;
+    /* height: 220px; */
 
     & h1 {
       position: relative;
       font-weight: normal;
       text-align: center;
       font-size: 3rem;
+      z-index: 1;
     }
 
     /*MEDIA QUERIES */
     @media (max-width: 820px) {
       & {
         padding: 30px 10px;
-        height: 180px;
+        /* height: 180px; */
       }
 
       & h1 {
@@ -48,16 +49,11 @@ const SectionStyle = styled.div`
     @media (max-width: 576px) {
       & {
         padding: 25px 10px;
-        height: 150px;
+        /* height: 150px; */
       }
 
       & h1 {
         font-size: 2rem;
-      }
-
-      &::before {
-        content: "";
-        border-radius: 10px;
       }
     }
 
@@ -65,7 +61,7 @@ const SectionStyle = styled.div`
       & {
         padding: 20px 80px 20px 20px;
         margin: 10px 0;
-        max-height: 110px;
+        /* max-height: 110px; */
       }
 
       & h1 {
@@ -97,9 +93,14 @@ const SectionStyle = styled.div`
     border-radius: 25px;
 
     /*MEDIA QUERIES */
+    @media (max-width: 576px) {
+      .section::before {
+        border-radius: 2px;
+      }
+    }
   }
 
-  .apropos-card::before {
+  /* .apropos-card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -114,7 +115,7 @@ const SectionStyle = styled.div`
     -webkit-filter: brightness(0.6);
     filter: brightness(0.6);
     border-radius: 25px;
-  }
+  } */
 `;
 
 export default HomeSection;
