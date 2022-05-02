@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { UseFetch } from "../tools/Services";
 import styled from "styled-components";
-import LeftArrow from "../assets/arrow-left.png";
-import RightArrow from "../assets/arrow-right.png";
+import leftArrow from "../assets/arrow-left.png";
+import rightArrow from "../assets/arrow-right.png";
 
 const Carousel = (id) => {
   const [current, setCurrent] = useState(0);
@@ -52,7 +52,7 @@ const Carousel = (id) => {
 
             <img
               className={lengthArray > 1 ? "arrow-left" : "hide"}
-              src={LeftArrow}
+              src={leftArrow}
               alt="left arrow"
               key={`${index}-${id}-arrow-left`}
               onClick={prevSlide}
@@ -60,7 +60,7 @@ const Carousel = (id) => {
 
             <img
               className={lengthArray > 1 ? "arrow-right" : "hide"}
-              src={RightArrow}
+              src={rightArrow}
               alt="right arrow"
               key={`${index}-${id}-arrow-right`}
               onClick={nextSlide}

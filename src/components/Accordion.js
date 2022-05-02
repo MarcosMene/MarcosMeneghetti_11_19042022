@@ -1,6 +1,6 @@
 import React from "react";
-import UpArrow from "../assets/VectorUp.png";
-import DownArrow from "../assets/VectorDown.png";
+import upArrow from "../assets/vectorup.png";
+import downArrow from "../assets/vectordown.png";
 
 import styled from "styled-components";
 
@@ -16,9 +16,9 @@ function Accordion({ title, active, setActive, text, police }) {
             }}
           >
             {active === title ? (
-              <img src={UpArrow} alt="uparrow" />
+              <img src={upArrow} alt="uparrow" />
             ) : (
-              <img src={DownArrow} alt="uparrow" />
+              <img src={downArrow} alt="uparrow" />
             )}
           </span>
         </div>

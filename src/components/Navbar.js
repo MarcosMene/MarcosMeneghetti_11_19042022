@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Logo from "../assets/LOGO.png";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const navLinkStyles = ({ isActive }) => {
@@ -15,7 +15,7 @@ const Navbar = () => {
       <section className="container">
         <HeaderStyle>
           <NavLink style={navLinkStyles} to="/">
-            <img src={Logo} alt="logo" />
+            <img src={logo} alt="logo" />
           </NavLink>
           <NavStyle>
             <NavLink style={navLinkStyles} to="/">

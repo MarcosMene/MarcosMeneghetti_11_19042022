@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "../assets/LOGO-footer.png";
+import logo from "../assets/logo-footer.png";
 import styled from "styled-components";
 
 const footer = () => {
   return (
     <Footer>
-      <img src={Logo} alt="logo" />
+      <img src={logo} alt="logo" />
       <p>&copy; 2022 Kasa. All rights reserved</p>
     </Footer>
   );

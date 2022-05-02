@@ -2,8 +2,8 @@ import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { UseFetch } from "../tools/Services";
 import styled from "styled-components";
-import FullStar from "../assets/full-star.png";
-import EmptyStar from "../assets/empty-star.png";
+import fullStar from "../assets/full-star.png";
+import emptyStar from "../assets/empty-star.png";
 
 const LogementRating = ({ sellerName, sellerImage }) => {
   const urlParams = useParams();
@@ -27,9 +27,9 @@ const LogementRating = ({ sellerName, sellerImage }) => {
         {housingData.map((star, index) =>
           allStars.map((stars) =>
             star.rating <= stars - 1 ? (
-              <img src={EmptyStar} alt="empty-star" key={`${index}-${stars}`} />
+              <img src={emptyStar} alt="empty-star" key={`${index}-${stars}`} />
             ) : (
-              <img src={FullStar} alt="full-star" key={`${index}-${stars}`} />
+              <img src={fullStar} alt="full-star" key={`${index}-${stars}`} />
             )
           )
         )}
