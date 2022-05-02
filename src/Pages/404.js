@@ -17,8 +17,14 @@ const page404 = () => {
 };
 
 const Container404 = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
   height: 90vh;
@@ -44,9 +50,13 @@ const Container404 = styled.div`
     }
     p {
       font-size: 2rem;
-
       margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 
@@ -58,21 +68,33 @@ const Container404 = styled.div`
     }
   }
   @media (max-width: 576px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     height: 100vh;
-
     h1 {
       font-size: 9rem;
     }
     p {
       font-size: 1.5rem;
+      font-size: 1.5rem;
       margin: 0;
       padding: 0;
       margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 
@@ -92,7 +114,12 @@ const Container404 = styled.div`
       margin: 0;
       padding: 0;
       margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 

@@ -38,6 +38,13 @@ const GalleryImageStyle = styled.div`
   position: relative;
 
   &:hover .gradient {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(70%, rgba(255, 97, 97, 0)),
+      to(rgba(139, 56, 56, 0.6))
+    );
     background: linear-gradient(
       180deg,
       rgba(255, 97, 97, 0) 70%,
@@ -49,6 +56,7 @@ const GalleryImageStyle = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 25px;
   }
@@ -59,11 +67,19 @@ const GalleryImageStyle = styled.div`
     bottom: 0;
     right: 0;
     width: 100%;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(20%, rgba(255, 97, 97, 0.2)),
+      to(rgba(139, 56, 56, 0.8))
+    );
     background: linear-gradient(
       180deg,
       rgba(255, 97, 97, 0.2) 20%,
       rgba(139, 56, 56, 0.8) 100%
     );
+    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     border-radius: 25px;
     z-index: 1;
@@ -85,11 +101,6 @@ const GalleryImageStyle = styled.div`
     width: 100%;
     height: 100%;
   }
-
-  /* @media (max-width: 485px) {
-    width: 100%;
-    height: 100%;
-  } */
 `;
 
 export default Card;

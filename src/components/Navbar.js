@@ -32,8 +32,14 @@ const Navbar = () => {
 };
 
 const HeaderStyle = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 10px 0px;
   max-width: 1440px;
@@ -58,8 +64,11 @@ const HeaderStyle = styled.div`
 `;
 
 const NavStyle = styled.nav`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  /* width: 200px; */
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   a {

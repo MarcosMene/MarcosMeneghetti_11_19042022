@@ -40,8 +40,6 @@ const SectionStyleHome = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.9;
-    /* -webkit-filter: brightness(0.6);
-    filter: brightness(0.6); */
     border-radius: 25px;
 
     & h1 {

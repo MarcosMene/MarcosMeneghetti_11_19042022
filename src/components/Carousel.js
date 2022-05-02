@@ -87,9 +87,11 @@ const CarouselContainer = styled.div`
     cursor: pointer;
     min-width: 20px;
     max-width: 5%;
-
     z-index: 10;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
   }
 
@@ -102,19 +104,22 @@ const CarouselContainer = styled.div`
 
   .slide {
     opacity: 0;
-
+    -webkit-transition-duration: 1s ease;
     transition-duration: 1s ease;
   }
 
   .slide.active {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
+    -webkit-transition-duration: 1s;
     transition-duration: 1s;
   }
   .imageCarousel {
     width: 100%;
     height: 410px;
     border-radius: 5px;
+    -o-object-fit: cover;
     object-fit: cover;
   }
   .pagination {
