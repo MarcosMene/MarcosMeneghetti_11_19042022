@@ -3,7 +3,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import Section from "../components/Section";
 import Accordion from "../components/Accordion";
-import { AboutData } from "../AboutData/AboutData";
+import { AboutData } from "../aboutdata/AboutData";
 import apropos from "../assets/apropos.png";
 
 const Apropos = () => {

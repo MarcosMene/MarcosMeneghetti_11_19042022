@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Housing from "../Pages/Housings";
-import Page404 from "../Pages/404";
+import Page404 from "../Pages/Page404";
 
 const routesPath = (
   <Routes>
