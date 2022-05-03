@@ -30,11 +30,15 @@ const Housings = () => {
       </MainStyle>
     );
   } else {
-    return (
-      <main>
-        <Page404 />
-      </main>
-    );
+    if (data.length === 0) {
+      return <main className="loading">Loading...</main>;
+    } else {
+      return (
+        <main>
+          <Page404 />
+        </main>
+      );
+    }
   }
 };
 
