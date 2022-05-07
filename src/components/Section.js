@@ -59,29 +59,40 @@ const SectionStyle = styled.div`
 
     @media (max-width: 485px) {
       & {
-        padding: 25px 120px 25px 10px;
+        padding: 25px 10px;
         margin: 10px 0;
         height: 111px;
       }
 
       & h1 {
         font-size: 1.5rem;
+        width: 214px;
+        margin-right: auto;
       }
     }
     @media (max-width: 375px) {
       & {
-        padding: 25px 120px 25px 10px;
         margin: 10px 0;
       }
 
       & h1 {
         font-size: 1.5rem;
+        width: 214px;
       }
     }
 
+    @media (max-width: 360px) {
+      & {
+        margin: 10px 0;
+      }
+
+      & h1 {
+        font-size: 1.5rem;
+        width: 214px;
+      }
+    }
     @media (max-width: 320px) {
       & {
-        padding: 25px 60px 25px 10px;
         margin: 10px 0;
       }
 
