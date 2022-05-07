@@ -23,19 +23,21 @@ const SectionStyle = styled.div`
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    height: 220px;
 
     & h1 {
       position: relative;
       font-weight: normal;
       text-align: center;
       font-size: 3rem;
-      z-index: 1;
     }
 
     /*MEDIA QUERIES */
     @media (max-width: 820px) {
       & {
-        padding: 30px 10px;
+        padding: 40px 10px;
+        height: 150px;
+        margin: 45px 0;
       }
 
       & h1 {
@@ -46,7 +48,8 @@ const SectionStyle = styled.div`
 
     @media (max-width: 576px) {
       & {
-        padding: 25px 10px;
+        margin: 35px 0;
+        padding: 35px 10px;
       }
 
       & h1 {
@@ -56,7 +59,18 @@ const SectionStyle = styled.div`
 
     @media (max-width: 485px) {
       & {
-        padding: 20px 80px 20px 20px;
+        padding: 25px 120px 25px 10px;
+        margin: 10px 0;
+        height: 111px;
+      }
+
+      & h1 {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 375px) {
+      & {
+        padding: 25px 120px 25px 10px;
         margin: 10px 0;
       }
 
@@ -67,7 +81,12 @@ const SectionStyle = styled.div`
 
     @media (max-width: 320px) {
       & {
-        padding: 20px 20px 20px 20px;
+        padding: 25px 60px 25px 10px;
+        margin: 10px 0;
+      }
+
+      & h1 {
+        font-size: 1.5rem;
       }
     }
   }
