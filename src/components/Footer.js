@@ -12,7 +12,7 @@ const footer = () => {
 };
 
 const Footer = styled.div`
-  width: 100vw;
+  width: 100%;
   background-color: #000;
   color: #fff;
   display: -webkit-box;
