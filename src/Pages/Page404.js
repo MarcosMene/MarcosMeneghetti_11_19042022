@@ -11,7 +11,7 @@ const Page404 = () => {
           <span>Oups! La page que</span> vous demandez n'existe pas.
         </p>
       </div>
-      <NavLink to="/">Retourner sur la page d’accueil</NavLink>
+      <NavLink to="/">Retourner sur la page d'accueil</NavLink>
     </Container404>
   );
 };
