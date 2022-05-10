@@ -6,7 +6,7 @@ const Card = ({ title, id, cover }) => {
   return (
     <NavLink to={`housing/${id}`}>
       <GalleryImageStyle>
-        <img src={cover} alt="" />
+        <img src={cover} alt={title} />
         <div className="gradient"></div>
         <p>{title}</p>
       </GalleryImageStyle>
