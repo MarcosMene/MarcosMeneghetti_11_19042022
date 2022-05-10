@@ -18,7 +18,7 @@ function Accordion({ title, active, setActive, text, police }) {
             {active === title ? (
               <img src={upArrow} alt="uparrow" />
             ) : (
-              <img src={downArrow} alt="uparrow" />
+              <img src={downArrow} alt="downarrow" />
             )}
           </span>
         </div>
