@@ -12,7 +12,7 @@ const Apropos = () => {
   return (
     <main className="main">
       <Teststyle className="container">
-        <Section text={``} classname={`apropos-card`} />
+        <Section classname={`apropos-card`} />
 
         <Accordions>
           {AboutData.map((phrase, index) => (
